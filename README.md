@@ -1,6 +1,8 @@
 # food2forkAPI
 Interfaces with the food2forkAPI.
 
+rjson required.
+
 Check out the example in example.R
 It's free to sign up for 500 API queries. I've removed my key from the example, but you can get your own here: 
 http://food2fork.com/about/api
