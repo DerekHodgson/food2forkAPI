@@ -7,14 +7,10 @@
 # sort="r" sorts the by the top rated
 # sort="t" sorts by 'trendingness' -- cannot be used with queries
 
-masterF2F <- function(key, query="", sort=c("r", "t"), startPage=1, pages=1, outputFull=TRUE){
+masterF2F <- function(key, query="", sort="r", startPage=1, pages=1, outputFull=TRUE){
   IDList <- list()
   
   for(i in 1:pages){
-    print(key)
-    print(query)
-    print(sort)
-    
     recipeListTemp <- getSearchF2F(key=key, query=query, sort=sort, page=startPage + i - 1)
 
     # use getIDF2F to get the IDs, then appends them to the list
