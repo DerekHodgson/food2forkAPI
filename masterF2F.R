@@ -3,15 +3,23 @@
 #   them, and return them as one object
 # outputFull=FALSE will output the ingredients only
 # outputFull=TRUE will ouput all of the info downloaded
+# leaving query blank will return the top rated recipes
+# sort="r" sorts the by the top rated
+# sort="t" sorts by 'trendingness' -- cannot be used with queries
 
-masterF2F <- function(key, query="", sort="r", startPage=1, pages=1, outputFull=TRUE){
+masterF2F <- function(key, query="", sort=c("r", "t"), startPage=1, pages=1, outputFull=TRUE){
   IDList <- list()
   
   for(i in 1:pages){
+    print(key)
+    print(query)
+    print(sort)
+    
     recipeListTemp <- getSearchF2F(key=key, query=query, sort=sort, page=startPage + i - 1)
 
     # use getIDF2F to get the IDs, then appends them to the list
     lengthIDList <- length(IDList)
+
     IDListTemp <- getIDF2F(recipeListTemp)
     lengthIDListTemp <- length(IDListTemp)
     A <- lengthIDList + 1
