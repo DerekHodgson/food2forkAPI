@@ -1,8 +1,8 @@
 # works with the Food2Fork API as of Nov. 2016
 # this function will use the other F2F functions to search for recipes, download
 #   them, and return them as one object
-# output="ingredients" will output the ingredients only
-# output="all" will ouput all of the info downloaded
+# outputFull=FALSE will output the ingredients only
+# outputFull=TRUE will ouput all of the info downloaded
 
 masterF2F <- function(key, query="", sort="r", startPage=1, pages=1, outputFull=TRUE){
   IDList <- list()
