@@ -11,4 +11,4 @@ Use masterF2F() to download the recipe information. It uses the other functions 
 
 By changing the argument outputFull to FALSE when using the function masterF2F(), you can have it only output the ingredients grouped by recipe into lists.
 
-Data cleaning (https://github.com/DerekHodgson/food2forkDataCleaning) and analysis code is coming soon.
+Data cleaning and analysis code is coming soon (https://github.com/DerekHodgson/food2forkCleaning-Analysis).
